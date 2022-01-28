@@ -11,9 +11,9 @@ const books = [
 let moreBooks = books;
 books[1].title = books[1].title.toUpperCase();
 
-console.log("1a. books === moreBooks:", books === moreBooks);
-console.log("1b. books[1]:", books[1]);
-console.log("1c. moreBooks[1]:", moreBooks[1]);
+// console.log("1a. books === moreBooks:", books === moreBooks);
+// console.log("1b. books[1]:", books[1]);
+// console.log("1c. moreBooks[1]:", moreBooks[1]);
 
 // 2. Mentally evaluate the code below, and predict what will be logged.
 //    When you're ready, COMMENT IN THE CONSOLE LOGS and run the code to check your prediction.
@@ -39,7 +39,7 @@ let person = {
 };
 
 // Hmmm... This line isn't updating the person object. Can you fix it?
-person.firstName.toUpperCase();
+person.firstName = person.firstName.toUpperCase();
 
 // Don't change the line below. When you fix the code, it should log AVERY
-console.log("3. person.firstName:", person.firstName);
+console.log("3. person.firstName:", person, person.firstName);
