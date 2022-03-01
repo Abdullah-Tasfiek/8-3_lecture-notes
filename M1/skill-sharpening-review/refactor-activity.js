@@ -4,7 +4,8 @@
 // 1. Review the problem prompt
 // 2. Take a look at the existing code, including the helper functions. Can you describe what's happening and how the code works?
 // 3. Check if the code is working. There are no tests, you will have to check by calling gradeAssignments with example input and determining for yourself whether you think it's working.
-// 4. Refactor the code so that it works for percentage assignments. Don't just paste in a separate solution, try to write code that "fits" with the way the existing code is organized.
+// 4. Refactor the code so that it works for percentage assignments. 
+// `Don't just paste in a separate solution, try to write code that "fits" with the way the existing code is organized.
 // 5. Complete the getOtherGrade helper function. Check your work by calling it with some examples to make sure it returns what you want!
 // 6. Use the getOtherGrade function to complete gradeAssignments
 // 7. Call gradeAssignments with some example inputs to convince yourself that the function works as it's supposed to!
@@ -50,16 +51,23 @@
     //>   { 
     //>     kind: "ESSAY",
     //>     score: { received: 4, max: 5 },
-    //>     status: "SCORE: 4/5",
+    //>     status: "SCORE: 4/5",ls
     //>   },
     //> ];
  */
+  
+    const assignments = [
+    { kind: "PASS-FAIL", score: { received: 4, max: 4 } },
+    { kind: "PERCENTAGE", score: { received: 8, max: 10 } },
+    { kind: "ESSAY", score: { received: 4, max: 5 } },
+  ];
+
 function gradeAssignments(assignments) {
   for (const assignment of assignments) {
     if (assignment.kind === "PASS-FAIL") {
       assignment.status = getPassFailGrade(assignment);
     } else if (assignment.kind === "PERCENTAGE") {
-      getPercentageGrade();
+      getPercentageGrade(assignment);
     } else {
     }
   }
@@ -86,4 +94,6 @@ function getPercentageGrade(assignment) {
   }
 }
 
-function getOtherGrade(assignment) {}
+function getOtherGrade(assignment){}
+gradeAssignments(assignments)
+console.log(assignments);

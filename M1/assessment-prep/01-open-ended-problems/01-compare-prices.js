@@ -9,9 +9,22 @@
 // DO NOT CHANGE THE VALUE OF THESE VARIABLES
 let priceOfHouse = "€1.500.000";
 let priceOfCar = "€20.000";
+function convertStringToNumber(str) {
+  str = str.split('.');
+  str[0] = str[0].slice(1);  
+  str = str.join('');
+  str = Number(str);
+  return str;
+}
+console.log(convertStringToNumber(priceOfCar));
+
+function convertStringToNumber(str) {
+return parseInt((str.replaceAll('.','')).substring(1))
+}
 
 if (priceOfHouse > priceOfCar) {
   console.log("The house is more expensive");
 } else {
   console.log("The car is more expensive");
 }
+
