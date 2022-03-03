@@ -9,10 +9,25 @@ const greet = (name) => {
     result = "Welcome to NASA, space cadet!";
   }
   return result;
-}
+};
 
+<<<<<<< HEAD
 // console.log(greet("Jessica")); //> "Welcome to NASA, Jessica!"
 // console.log(greet()); //> "Welcome to NASA, space cadet!"
+=======
+// function name(name) {
+//   let result = "";
+//   if (name) {
+//     result = `Welcome to NASA, ${name}!`;
+//   } else {
+//     result = "Welcome to NASA, space cadet!";
+//   }
+//   return result;
+// }
+
+console.log(greet("Jessica")); //> "Welcome to NASA, Jessica!"
+console.log(greet()); //> "Welcome to NASA, space cadet!"
+>>>>>>> beaf787b4274c1cdb24dc243b013e713d077e8b2
 
 /**
  * 2. Try writing the greet() function above on a single line.
@@ -23,6 +38,7 @@ const greet = (name) => {
  * .
  * (you may need to use a ternary operator and an implicit return)
  */
+<<<<<<< HEAD
 //default parameter
 const greet = (name = '') => {
   //      condition    ?  if true, this executes    :  else this executes
@@ -34,3 +50,23 @@ console.log(greet());
  * 3. Are there any benefits to using the arrow function syntax? Are there any limitations? Write a brief response below.
  */
 //concise code, better for reusability, shorter code. you can chain when using higher order functions.
+=======
+
+const greet2 = (name) =>
+  name ? `Welcome to NASA, ${name}!` : "Welcome to NASA, space cadet!";
+
+console.log(greet2("Jessica")); //> "Welcome to NASA, Jessica!"
+console.log(greet2()); //> "Welcome to NASA, space cadet!"
+
+/**
+ * 3. Are there any benefits to using the arrow function syntax? Are there any limitations? Write a brief response below.
+ */
+
+// concise
+// potentially more readable
+// easier to create 'anonymous functions' (a function without a name)
+
+// BUT
+
+// arrow functions aren't hoisted
+>>>>>>> beaf787b4274c1cdb24dc243b013e713d077e8b2
