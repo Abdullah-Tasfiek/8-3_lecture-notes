@@ -46,17 +46,10 @@ function go(direction, operation) {
   return direction;
 }
 
-<<<<<<< HEAD
 go("Left", storeDirections);
 go("Right", storeDirections);
 go("Up", storeDirections);
 console.log(directions); //> ["Left", "Right", "Up"]
-=======
-go('Left', storeDirections);
-go('Right', storeDirections);
-go('Up', storeDirections);
-// console.log(directions); //> ["Left", "Right", "Up"]
->>>>>>> b64d197c1c6cd885dcdef5fbef30bc3e998289b3
 
 /**
  * Take a look at the higher order function below.
