@@ -20,10 +20,14 @@ const comics = [
 
 function printAllComics(comics) {
   // Write your code here.
-  for (let comic of comics) {
-    console.log(`${comic.title} by ${comic.author}`);
-  }
+  comics.forEach((comic, i)=> {
+    console.log(`(${i+1} out of 4) "${comic.title}" by ${comic.author}`)
+  });
 }
+//   for (let comic of comics) {
+//     console.log(`${comic.title} by ${comic.author}`);
+//   }
+// }
 
 printAllComics(comics);
 
