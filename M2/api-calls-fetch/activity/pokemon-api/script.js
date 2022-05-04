@@ -2,9 +2,6 @@ const BASE_URL = 'https://pokeapi.co/api/v2/pokemon';
 
 const form = document.querySelector('form');
 
-<<<<<<< HEAD
-
-=======
 // form.addEventListener('submit', (event) => {
 //   event.preventDefault();
 //   const { id } = event.target;
@@ -65,37 +62,36 @@ fetch(BASE_URL + '/8')
 //
 //
 //
-// function getPokemonByID(id) {
-//   fetch(`${BASE_URL}/${3}`)
-//     .then((response) => response.json())
-//     .then((result) => {
-//       const pokemon = createPokemonArticle(result);
-//       document.querySelector('.pokemon').append(pokemon);
-//     })
-//     .catch((error) => {
-//       const message = createErrorMessage(error);
-//       document.querySelector('main').append(message);
-//     });
-// }
+function getPokemonByID(id) {
+  fetch(`${BASE_URL}/${3}`)
+    .then((response) => response.json())
+    .then((result) => {
+      const pokemon = createPokemonArticle(result);
+      document.querySelector('.pokemon').append(pokemon);
+    })
+    .catch((error) => {
+      const message = createErrorMessage(error);
+      document.querySelector('main').append(message);
+    });
+}
 
-// function createPokemonArticle(pokemon) {
-//   const article = document.createElement('article');
-//   article.innerHTML = `
-//     <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
-//     <h2>${pokemon.name} (#${pokemon.order})</h2>
-//   `;
+function createPokemonArticle(pokemon) {
+  const article = document.createElement('article');
+  article.innerHTML = `
+    <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}" />
+    <h2>${pokemon.name} (#${pokemon.order})</h2>
+  `;
 
-//   return article;
-// }
+  return article;
+}
 
-// function createErrorMessage(message) {
-//   const section = document.createElement('section');
-//   section.classList.add('error');
-//   section.innerHTML = `
-//     <p>There was an error!</p>
-//     <p class="message">${message}</p>
-//   `;
+function createErrorMessage(message) {
+  const section = document.createElement('section');
+  section.classList.add('error');
+  section.innerHTML = `
+    <p>There was an error!</p>
+    <p class="message">${message}</p>
+  `;
 
-//   return section;
-// }
->>>>>>> e76e63584bd04af94b8f9fe36fe00a79c79ed04b
+  return section;
+}
